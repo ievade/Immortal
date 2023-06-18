@@ -41,7 +41,7 @@ var input = document.querySelector('input');
         document.querySelector('iframe').src = decodedUrl;
         window.location.hash = ""
         form.addEventListener('submit', async event => {
-    setTimeout(() => {window.location.reload()},200)
+    setTimeout(() => {window.location.reload(true)},300)
         });},0)
         setTimeout(() => {
             const settings = JSON.parse(localStorage.getItem('imm_settings'));
