@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Immortal</title>
+  </head>
+  <body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+      * {color-scheme:dark; font-family: "Inter", "Segoe UI", "Roboto", sans-serif;}
+      pre, code, textarea {font-family: "IBM Plex Mono", monospace;}
+      vsep {border-right: 2px solid rgba(255,255,255,0.7); margin-left:4px; margin-right:8px;}
+      nav * {display:inline; filter:none;}
+      nav:hover {background:#0a3b4f;}
+      input::placeholder {font-size:14.5px;}
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <nav class="w-full h-fit rounded-b-lg bg-cyan-950 px-2 py-2 ring-[1px] ring-cyan-700 duration-[350ms] hover:ring-[3px] ">
+      <h1 class="text-xl font-light">Immortal </h1> <vsep></vsep> <a href="#" class="px-2 py-1 rounded-lg bg-cyan-800 hover:ring-1 ring-white duration-300">Home</a>   <a href="#" class="px-2 py-1 rounded-lg bg-cyan-800 hover:ring-1 ring-white duration-300">Activities</a>  <a href="#" class="px-2 py-1 rounded-lg bg-cyan-800 hover:ring-1 ring-white duration-300">Apps</a> <a href="#" class="px-2 py-1 rounded-lg bg-cyan-800 hover:ring-1 ring-white duration-300">Settings</a>
+       <a href="#" class="px-2 py-1 rounded-lg bg-cyan-800 hover:ring-1 ring-white duration-300">Search</a> </nav>
+       <br>
+       <h1 class="text-3xl font-semibold mx-auto text-center">Immortal Settings</h1>
+       <p class="text-center">This is stored in your LocalStorage.</p>
+       <br>
+      
+        <h1 class="text-2xl font-semibold mx-auto text-center">Tab Cloak</h1>
+       <grid class="grid grid-cols-3 bg-black/10 w-full h-[15vh] rounded-lg px-2 py-1">
+        
+         <div><p>Enable Tab Cloak: <input type="checkbox" id="etc" class="h-4 w-4"></input></p></div>
+          <div><p>Enable Cloak on Unfocus: <input type="checkbox" id="tcu" class="h-4 w-4"></input></p></div>
+          <div><p>Tab Cloak Preset: <select  class="tcp rounded-lg hover:ring-2 focus:ring-2 ring-gray-800">
+            <option selected>Custom</option>
+            <option>Google</option>
+            <option >Google Classroom</option>
+            <option>Google Drive</option>
+            <option>Google Slides</option>
+            <option>Google Docs</option>
+            <option>Google Sheets</option>
+            <option>Google Duo</option>
+            <option>Google Meet</option>
+            <option>Zoom</option>
+            <option>Gmail</option>
+            <option>Bing</option>
+            <option>Microsoft 365 (Office)</option>
+            <option>I-Ready</option>
+            <option>Canvas</option>
+            <option>Schoology</option>
+            <option>ClassLink Launchpad</option>
+            <option>Khan Academy</option>
+            <option>Code.org</option>
+            <option>Scratch.mit.edu</option>
+            <option>Kahoot</option>
+            </select></p></div>
+             <div><p>Tab Cloak Name: <input id="tcn" class="rounded-lg hover:ring-2 focus:ring-2 ring-gray-800"></input></p></div>
+               <div><p>Tab Cloak URL: <input id="tcurl" class="rounded-lg hover:ring-2 focus:ring-2 ring-gray-800"></input></p></div>
+       </grid>
+        <h1 class="text-2xl font-semibold mx-auto text-center">Search Settings</h1>
+         <grid class="grid grid-cols-3 bg-black/10 w-full h-[15vh] rounded-lg px-2 py-1">
+   
+          <div><p>Search Engine Preset: <select id="sep" class="rounded-lg hover:ring-2 focus:ring-2 ring-gray-800">
+            <option selected value="https://duckduckgo.com/">DuckDuckGo</option>
+            <option value="https://google.com/search?q=">Google</option>
+            <option value="https://bing.com/search?q=">Bing 🤮</option>
+            </select></p></div>
+           <div><p>Search Engine Base URL: <input id="seburl" class="rounded-lg hover:ring-2 focus:ring-2 ring-gray-800"></input></p></div>
+           
+       </grid>
+        
+       <h1 class="text-2xl font-semibold mx-auto text-center">Emergency Button</h1>
+       <grid class="grid grid-cols-3 bg-black/10 w-full h-[15vh] rounded-lg px-2 py-1"> 
+         <div><p>Emergency Hotkey: <input id="hk" class="rounded-lg hover:ring-2 focus:ring-2 ring-gray-800 w-8" maxlength="1"  value="~"></input></p></div>
+        <div><p>Emergency Button Preset: <select class="rounded-lg hover:ring-2 focus:ring-2 ring-gray-800" id="ebp">
+            <option selected>Custom</option>
+            <option>Google</option>
+            <option >Google Classroom</option>
+            <option>Google Drive</option>
+            <option>Google Slides</option>
+            <option>Google Docs</option>
+            <option>Google Sheets</option>
+            <option>Google Duo</option>
+            <option>Google Meet</option>
+            <option>Zoom</option>
+            <option>Gmail</option>
+            <option>Bing</option>
+            <option>Microsoft 365 (Office)</option>
+            <option>I-Ready</option>
+            <option>Canvas</option>
+            <option>Schoology</option>
+            <option>ClassLink Launchpad</option>
+            <option>Khan Academy</option>
+            <option>Code.org</option>
+            <option>Scratch.mit.edu</option>
+            <option>Kahoot</option>
+            </select></p></div>
+              <div><p>Emergency URL: <input id="eurl" class="rounded-lg hover:ring-2 focus:ring-2 ring-gray-800"></input></p></div>
+       </grid>
+      <h1 class="text-2xl font-semibold mx-auto text-center">Experimental</h1>
+          <grid class="grid grid-cols-2 bg-black/10 w-full h-[35vh] rounded-lg px-2 py-1">
+   
+          <div><p>Custom CSS <span class="opacity-75 text-xs">Will be injected into the IFrame on load</span>:<br><textarea class="rounded-lg hover:ring-2 focus:ring-2 ring-gray-800" id="ccss" rows="6" cols="32"></textarea></p></div>
+          <div><p>Custom JS <span class="opacity-75 text-xs">Will be injected into the IFrame on load</span>:<br><textarea class="rounded-lg hover:ring-2 focus:ring-2 ring-gray-800" id="cjs" rows="6" cols="32"></textarea></p></div>
+           
+       </grid>
+        <button onclick="saveSettings()" class="mx-2 px-4 py-2 text-xl rounded-lg bg-green-800 hover:ring-1 ring-white duration-300 hover:bg-green-700">Save Changes</button>
+        <button onclick="resetSettings()" class="mx-2 px-4 py-2 text-xl rounded-lg bg-red-800 hover:ring-1 ring-white duration-300 hover:bg-red-700">Reset Changes</button>
+        <div><p>Random Stinky and Juicy That Smells In Your Screen Fart Sound Effect Blasting Into Your Headphones Every 6.9 Minutes That You Can Not Disable For No Reason That Has A Extremely Long Name For Absolutely No Reason But To Be A Useless Thing: <input type="checkbox" id="rsjtsiysfsebiyhe6.9mtycndfnrthaelnfanrbtbaut" class="h-4 w-4" checked disabled></input></p></div>
+        <script src="settings.js"></script>
+  </body>
+</html>
