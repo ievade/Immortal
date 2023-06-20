@@ -20,7 +20,8 @@ function saveSettings() {
         ebp: document.querySelector('#ebp').value,
         eurl: document.querySelector('#eurl').value,
         cjs: document.querySelector('#cjs').value,
-        ccss: document.querySelector('#ccss').value
+        ccss: document.querySelector('#ccss').value,
+        hk: document.querySelector('#hk').value
       };
       
       localStorage.setItem('imm_settings', JSON.stringify(settings));
