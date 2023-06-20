@@ -14,3 +14,29 @@ window.onhashchange = () => {
         } catch {}
     }
 
+    const select = document.querySelector('select');
+
+    select.addEventListener('change', event => {
+      const option = event.target.value;
+    
+      if (option === 'blob') {
+        const blob = new Blob([document.documentElement.outerHTML], { type: 'text/html' });
+        const url = URL.createObjectURL(blob);
+        window.location.replace(url);
+        select.option = "Open in...";
+      } else if (option === 'popup') {
+        url = document.location
+        let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
+width=0,height=0,left=-1000,top=-1000`;
+
+        popupWindow = open('about:blank', 'test', params);
+        popupWindow.document.body.innerHTML = `<iframe style="position:absolute;width:100%;height:100%;border:none;top:0;left:0;right:0;bottom:0;" src="${url}"></iframe>`;
+        window.location.replace("https://google.com");
+        select.option = "Open in...";
+      } else if (option === 'ab') {
+        const url = 'about:blank';
+        const win = window.open(url);
+        win.document.body.innerHTML = `<iframe style="position:absolute;width:100%;height:100%;border:none;top:0;left:0;right:0;bottom:0;" src="${window.location.href}"></iframe>`;
+      }
+      select.option = "Open in...";
+    });
