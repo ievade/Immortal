@@ -15,13 +15,14 @@
       nav * {display:inline; filter:none;}
       nav:hover {background:#0a3b4f;}
       input::placeholder {font-size:14.5px;}
+      .font-mono {font-family: "IBM Plex Mono", monospace !important;}
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <nav class="w-full h-fit rounded-b-lg bg-cyan-950 px-2 py-2 ring-[1px] ring-cyan-700 duration-[350ms] hover:ring-[3px] ">
       <h1 class="text-xl font-light">Immortal </h1> <vsep></vsep>
        <a href="index.html" class="px-2 py-1 rounded-lg bg-cyan-800 hover:ring-1 ring-white duration-300">Home</a> 
-         <a href="https://mathematicnoodles.org" class="px-2 py-1 rounded-lg bg-cyan-800 hover:ring-1 ring-white duration-300">Activities</a>
+         <a href="rdir.html" class="px-2 py-1 rounded-lg bg-cyan-800 hover:ring-1 ring-white duration-300">Activities</a>
             <a href="#" class="px-2 py-1 rounded-lg bg-cyan-800 hover:ring-1 ring-white duration-300">Settings</a>
        <a href="search.html" class="px-2 py-1 rounded-lg bg-cyan-800 hover:ring-1 ring-white duration-300">Search</a> </nav>
        <br>
@@ -57,8 +58,8 @@
             <option>Scratch.mit.edu</option>
             <option>Kahoot</option>
             </select></p></div>
-             <div><p>Tab Cloak Name: <input id="tcn" class="px-4 py-[4px] text-lg rounded-lg bg-cyan-800 hover:bg-cyan-900 hover:ring-1 ring-white duration-300 cursor-pointer"></input></p></div>
-               <div><p>Tab Cloak URL: <input id="tcurl" class="px-4 py-[4px] text-lg rounded-lg bg-cyan-800 hover:bg-cyan-900 hover:ring-1 ring-white duration-300 cursor-pointer"></input></p></div>
+             <div><p>Tab Cloak Name: <input id="tcn" class="font-mono px-4 py-[4px] text-lg rounded-lg bg-cyan-800 hover:bg-cyan-900 hover:ring-1 ring-white duration-300 cursor-pointer"></input></p></div>
+               <div><p>Tab Cloak URL: <input id="tcurl" class="font-mono px-4 py-[4px] text-lg rounded-lg bg-cyan-800 hover:bg-cyan-900 hover:ring-1 ring-white duration-300 cursor-pointer"></input></p></div>
        </grid>
         <h1 class="text-2xl font-semibold mx-auto text-center">Search Settings</h1>
          <grid class="grid grid-cols-3 bg-black/10 w-full h-[15vh] rounded-lg px-2 py-1">
@@ -68,13 +69,13 @@
             <option value="https://google.com/search?q=">Google</option>
             <option value="https://bing.com/search?q=">Bing 🤮</option>
             </select></p></div>
-           <div><p>Search Engine Base URL: <input id="seburl" class="px-4 py-[4px] text-lg rounded-lg bg-cyan-800 hover:bg-cyan-900 hover:ring-1 ring-white duration-300 cursor-pointer"></input></p></div>
+           <div><p>Search Engine Base URL: <input id="seburl" class="font-mono px-4 py-[4px] text-lg rounded-lg bg-cyan-800 hover:bg-cyan-900 hover:ring-1 ring-white duration-300 cursor-pointer"></input></p></div>
            
        </grid>
         
        <h1 class="text-2xl font-semibold mx-auto text-center">Emergency Button</h1>
        <grid class="grid grid-cols-3 bg-black/10 w-full h-[15vh] rounded-lg px-2 py-1"> 
-         <div><p>Emergency Hotkey: <input id="hk" class=" text-lg rounded-lg bg-cyan-800 hover:bg-cyan-900 hover:ring-1 ring-white duration-300 cursor-pointer w-8" maxlength="1"  value="~"></input></p></div>
+         <div><p>Emergency Hotkey: <input id="hk" class="font-mono text-lg rounded-lg bg-cyan-800 hover:bg-cyan-900 hover:ring-1 ring-white duration-300 cursor-pointer w-8" maxlength="1"  value="~"></input></p></div>
         <div><p>Emergency Button Preset: <select class="px-4 py-[4px] text-lg rounded-lg bg-cyan-800 hover:bg-cyan-900 hover:ring-1 ring-white duration-300 cursor-pointer focus:rounded-b-none" id="ebp">
             <option selected>Custom</option>
             <option>Google</option>
@@ -98,7 +99,7 @@
             <option>Scratch.mit.edu</option>
             <option>Kahoot</option>
             </select></p></div>
-              <div><p>Emergency URL: <input id="eurl" class="px-4 py-[4px] text-lg rounded-lg bg-cyan-800 hover:bg-cyan-900 hover:ring-1 ring-white duration-300 cursor-pointer"></input></p></div>
+              <div><p>Emergency URL: <input id="eurl" class="font-mono px-4 py-[4px] text-lg rounded-lg bg-cyan-800 hover:bg-cyan-900 hover:ring-1 ring-white duration-300 cursor-pointer"></input></p></div>
        </grid>
       <h1 class="text-2xl font-semibold mx-auto text-center">Experimental</h1>
           <grid class="grid grid-cols-2 bg-black/10 w-full h-[35vh] rounded-lg px-2 py-1">

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+<style>
+    * {color-scheme:dark}
+    </style>
+  <div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-cyan-950 py-6 sm:py-12">
+  
+    <div class="relative bg-cyan-800 px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
+     <h1 class="text-3xl font-light text-white text-center">Redirect Warning</h1>
+     <p class="text-xl font-light text-white text-center">You are about to leave Immortal to go to</p>
+     <p class="text-xl font-bold text-white text-center">https://mathematicnoodles.org</p>
+     <p class="text-xl font-light text-white text-center">Both Immortal and this site are both <br> owned by me. Would you like to go?</p>
+     <span class="mx-auto text-center flex justify-center">
+     <a href="https://mathematicnoodles.org" class="mr-2 text-lg px-3 py-1 rounded-lg bg-cyan-950 hover:bg-cyan-900 ring-cyan-950 hover:ring-2 duration-300">Go to site</a>
+     <a onclick="window.history.back()" class="text-lg px-3 py-1 rounded-lg bg-cyan-950 hover:bg-cyan-900 ring-cyan-950 hover:ring-2 duration-300">Go back</a>
+     </span>
+    </div>
+  </div>
+  
+</body>
+</html>
