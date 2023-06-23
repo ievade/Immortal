@@ -42,7 +42,8 @@ var input = document.querySelector('input');
         form.addEventListener('submit', async event => {
     setTimeout(() => {window.location.reload(true)},300)
         });},0)
-        setTimeout(() => {
+        
+        setTimeout(function() {
             const settings = JSON.parse(localStorage.getItem('imm_settings'));
         const iframe = document.querySelector('iframe');
 const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
@@ -53,7 +54,31 @@ script.innerText = settings.cjs
 
 innerDoc.head.appendChild(style);
 innerDoc.head.appendChild(script);
-        },500)
+
+iframe.onload = function() {
+  const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+  const applyCSS = function() {
+    const styleElement = innerDoc.querySelector('style');
+
+    if (styleElement) {
+      // Append CSS to existing style element
+      styleElement.innerText = settings.ccss;
+    } else {
+      // Create new style element and add it to the head
+      const newStyleElement = innerDoc.createElement('style');
+      newStyleElement.innerText = settings.ccss;
+      innerDoc.head.appendChild(newStyleElement);
+    }
+  };
+
+  // Apply CSS initially
+  applyCSS();
+
+  // Apply CSS every time the iframe source is changed
+  iframe.onload = applyCSS;
+};
+        },1000);
+        
         
       </script>
               <script src="index.js"></script>
