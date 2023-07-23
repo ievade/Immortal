@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Immortal</title>
+  </head>
+  <body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+      * {color-scheme:dark; font-family: "Inter", "Segoe UI", "Roboto", sans-serif;}
+      pre, code {font-family: "IBM Plex Mono", monospace;}
+      vsep {border-right: 2px solid rgba(255,255,255,0.7); margin-left:4px; margin-right:8px;}
+      nav * {display:inline; filter:none;}
+      nav:hover {background:#0a3b4f;}
+      input::after {content:"_"}
+      input::placeholder {font-size:14.5px;}
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <nav class="w-fulll h-fit rounded-b-lg bg-cyan-950 px-2 py-2 ring-[1px] ring-cyan-700 duration-[350ms] hover:ring-[3px] ">
+      <h1 class="text-xl font-light">Immortal </h1> <vsep></vsep> 
+      <a href="index.html" class="px-2 py-1 rounded-lg bg-cyan-800 hover:ring-1 ring-white duration-300">Home</a>  
+       <a href="rdir.html" class="px-2 py-1 rounded-lg bg-cyan-800 hover:ring-1 ring-white duration-300">Activities</a>
+         <a href="settings.html" class="px-2 py-1 rounded-lg bg-cyan-800 hover:ring-1 ring-white duration-300">Settings</a>
+       <a href="#" class="px-2 py-1 rounded-lg bg-cyan-800 hover:ring-1 ring-white duration-300">Search</a> </nav>
+       <br>
+       <h1 class="text-3xl font-semibold mx-auto text-center">Immortal Search</h1>
+       <h2 class="text-lg font-semilight mx-auto text-center">Search Engine: <pre class="inline">DuckDuckGo</pre></h2>
+       <q class="text-center mx-auto block text-lg italic">Very creative quote here</q>
+       <form class="mx-auto text-center block">
+         <input type="text" maxlength="400" class="ring-2 ring-cyan-900 bg-cyan-950  rounded-lg px-2 py-1 w-[22rem]" placeholder="Search the web, find what you want, and get out."></input>
+        <button type="submit" value="" class="fa-solid px-4 py-2 rounded-lg bg-white -m-2 mx-1 text-black"></button>
+       </form>
+        <script src="index.js"></script>
+        <script src="uv/uv.bundle.js"></script>
+        <script src="uv/uv.config.js"></script>
+        <script src="quotes.js"></script>
+  </body>
+</html>
