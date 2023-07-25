@@ -1,0 +1,164 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head> 
+    <meta charset="UTF-8" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>Immortal</title> 
+  </head> 
+  <body> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css">
+    <link rel="stylesheet" href="https://codemirror.net/5/theme/cobalt.css">
+
+    <style> 
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap'); 
+      * {color-scheme:dark; font-family: "Inter", "Segoe UI", "Roboto", sans-serif;} 
+      pre, code, textarea {font-family: "IBM Plex Mono", monospace;} 
+      vsep {border-right: 2px solid rgba(255,255,255,0.7); margin-left:4px; margin-right:8px;} 
+      nav * {display:inline; filter:none;} 
+      .CodeMirror * {font-family: "IBM Plex Mono", monospace !important; word-break: break-word !important;} 
+      .CodeMirror {height:270px; width:460px; resize:both}
+      input::placeholder {font-size:14.5px;} 
+      .CodeMirror-wrap pre {
+    word-break: break-word !important;
+}
+      .font-mono {font-family: "IBM Plex Mono", monospace !important;} 
+      body,html {background: linear-gradient(120deg, rgba(01,06,15,1) 21%, rgba(01,21,49,49) 97%); width:100%;height:100%;}
+    </style> 
+    <link rel="stylesheet" href="index.css"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <nav class="h-fit w-full rounded-b-lg   bg-gradient-to-b from-[rgba(0,0,0,0),15%]  to-cyan-950 hover:to-[#0a3b4f] px-2 py-2 ring-[1px] ring-cyan-700 duration-[350ms] hover:ring-[3px] "> 
+      <h1 class="text-xl font-light">Immortal </h1> <vsep></vsep> 
+       <a href="index.html" class="px-2 py-1 rounded-lg bg-cyan-800 hover:ring-1 ring-white duration-300">Home</a>  
+         <a class="gpt rounded-lg bg-gray-600 px-2 py-1 ring-white duration-300 hover:ring-1">GPT</a>
+            <a href="#" class="px-2 py-1 rounded-lg bg-cyan-800 hover:ring-1 ring-white duration-300">Settings</a> 
+       <a href="search.html" class="px-2 py-1 rounded-lg bg-cyan-800 hover:ring-1 ring-white duration-300">Search</a> </nav> 
+       <br> 
+       <h1 class="text-3xl font-semibold mx-auto text-center">Immortal Settings</h1> 
+       <p class="text-center">This is stored in your LocalStorage.</p> 
+       <br> 
+       
+        <h1 class="text-2xl font-semibold mx-auto text-center">Tab Cloak</h1> 
+       <grid class="grid grid-cols-1 gap-3 bg-black/10 w-full h-[33vh] rounded-lg px-2 py-1"> 
+         
+         <div><p>Enable Tab Cloak: <input type="checkbox" id="etc" class="h-4 w-4"></input></p></div> 
+          <div><p>Enable Cloak on Unfocus: <input type="checkbox" id="tcu" class="h-4 w-4"></input></p></div> 
+          <div><p>Tab Cloak Preset: <select  class="tcp px-4 py-[4px] text-lg rounded-lg bg-cyan-800 hover:bg-cyan-900 hover:ring-1 ring-white duration-300 cursor-pointer focus:rounded-b-none"> 
+            <option selected>Custom</option> 
+            <option>Google</option> 
+            <option >Google Classroom</option> 
+            <option>Google Drive</option> 
+            <option>Google Slides</option> 
+            <option>Google Docs</option> 
+            <option>Google Sheets</option> 
+            <option>Google Duo</option> 
+            <option>Google Meet</option> 
+            <option>Zoom</option> 
+            <option>Gmail</option> 
+            <option>Bing</option> 
+            <option>Microsoft 365 (Office)</option> 
+            <option>I-Ready</option> 
+            <option>Canvas</option> 
+            <option>Schoology</option> 
+            <option>ClassLink Launchpad</option> 
+            <option>Khan Academy</option> 
+            <option>Code.org</option> 
+            <option>Scratch.mit.edu</option> 
+            <option>Kahoot</option> 
+            </select></p></div> 
+             <div><p>Tab Cloak Name: <input id="tcn" class="font-mono px-4 py-[4px] text-lg rounded-lg bg-cyan-800 hover:bg-cyan-900 hover:ring-1 ring-white duration-300 cursor-pointer"></input></p></div> 
+               <div><p>Tab Cloak URL: <input id="tcurl" class="font-mono px-4 py-[4px] text-lg rounded-lg bg-cyan-800 hover:bg-cyan-900 hover:ring-1 ring-white duration-300 cursor-pointer"></input></p></div> 
+       </grid> 
+        <h1 class="text-2xl font-semibold mx-auto text-center">Search Settings</h1> 
+         <grid class="grid grid-cols-1 gap-3  bg-black/10 w-full h-[13vh] rounded-lg px-2 py-1"> 
+    
+          <div><p>Search Engine Preset: <select id="sep" class="px-4 py-[4px] text-lg rounded-lg bg-cyan-800 hover:bg-cyan-900 hover:ring-1 ring-white duration-300 cursor-pointer focus:rounded-b-none"> 
+            <option selected value="https://duckduckgo.com/">DuckDuckGo</option> 
+            <option value="https://google.com/search?q=">Google</option> 
+            <option value="https://bing.com/search?q=">Bing 🤮</option> 
+            </select></p></div> 
+           <div><p>Search Engine Base URL: <input id="seburl" class="font-mono px-4 py-[4px] text-lg rounded-lg bg-cyan-800 hover:bg-cyan-900 hover:ring-1 ring-white duration-300 cursor-pointer"></input></p></div> 
+            
+       </grid> 
+         
+       <h1 class="text-2xl font-semibold mx-auto text-center">Emergency Button</h1> 
+       <grid class="grid grid-cols-1 gap-3 bg-black/10 w-full h-[20vh] rounded-lg px-2 py-1">  
+         <div><p>Emergency Hotkey: <input id="hk" class="font-mono text-lg rounded-lg bg-cyan-800 hover:bg-cyan-900 hover:ring-1 ring-white duration-300 cursor-pointer w-8" maxlength="1"  value="~"></input></p></div> 
+        <div><p>Emergency Button Preset: <select class="px-4 py-[4px] text-lg rounded-lg bg-cyan-800 hover:bg-cyan-900 hover:ring-1 ring-white duration-300 cursor-pointer focus:rounded-b-none" id="ebp"> 
+            <option selected>Custom</option> 
+            <option>Google</option> 
+            <option >Google Classroom</option> 
+            <option>Google Drive</option> 
+            <option>Google Slides</option> 
+            <option>Google Docs</option> 
+            <option>Google Sheets</option> 
+            <option>Google Duo</option> 
+            <option>Google Meet</option> 
+            <option>Zoom</option> 
+            <option>Gmail</option> 
+            <option>Bing</option> 
+            <option>Microsoft 365 (Office)</option> 
+            <option>I-Ready</option> 
+            <option>Canvas</option> 
+            <option>Schoology</option> 
+            <option>ClassLink Launchpad</option> 
+            <option>Khan Academy</option> 
+            <option>Code.org</option> 
+            <option>Scratch.mit.edu</option> 
+            <option>Kahoot</option> 
+            </select></p></div> 
+              <div><p>Emergency URL: <input id="eurl" class="font-mono px-4 py-[4px] text-lg rounded-lg bg-cyan-800 hover:bg-cyan-900 hover:ring-1 ring-white duration-300 cursor-pointer"></input></p></div> 
+       </grid> 
+       <h1 class="text-2xl font-semibold mx-auto text-center">Experimental</h1>
+       <grid class="grid md:grid-cols-2 grid-cols-1 gap-2 bg-black/10 w-full h-fit rounded-lg px-2 py-1">
+         <div id="ccssc">
+           <p>Custom CSS <span class="opacity-75 text-xs">Will be injected into the IFrame on load</span>:</p>
+           <textarea class="font-mono" id="ccss"></textarea>
+         </div>
+         <div id="cjsc">
+           <p>Custom JS <span class="opacity-75 text-xs">Will be injected into the IFrame on load</span>:</p>
+           <textarea class="font-mono" id="cjs"></textarea>
+         </div>
+         <div>
+           <p>3mb tailwind bundle: <input type="checkbox" onclick="setTimeout(() => {alert('this does absolutely nothing. it\'s just a joke setting')},200);" class="h-4 w-4"></p>
+         </div>
+         <div> <!-- This is here to use a grid space --></div>
+         <div class="plugins px-2 py-1 rounded-lg bg-slate-900 hover:ring-2 duration-[400ms] max-w-[400px]">
+           <h1 class="font-bold text-xl">Plugins:</h1>
+           Coming Soon...
+         </div>
+       </grid>
+       <button onclick="saveSettings()" class="mx-2 px-4 py-2 text-xl rounded-lg bg-green-800 hover:ring-1 ring-white duration-300 hover:bg-green-700">Save Changes</button>
+       <button onclick="resetSettings()" class="mx-2 px-4 py-2 text-xl rounded-lg bg-red-800 hover:ring-1 ring-white duration-300 hover:bg-red-700">Reset Changes</button>
+       <script src="settings.js"></script>
+       <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/codemirror.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/xml/xml.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/css/css.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/javascript/javascript.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/htmlmixed/htmlmixed.js'></script>
+
+       
+        <script>
+          var csseditor = CodeMirror.fromTextArea(document.getElementById("ccss"), {
+              styleActiveLine: true,
+              lineNumbers: true,
+              matchBrackets: true,
+              autoCloseBrackets: true,
+              autoCloseTags: true,
+              mode: "css",
+              theme: "cobalt",
+              lineWrapping: true
+          });
+          var jseditor = CodeMirror.fromTextArea(document.getElementById("cjs"), {
+            styleActiveLine: true,
+            lineNumbers: true,
+            matchBrackets: true,
+            autoCloseBrackets: true,
+            autoCloseTags: true,
+            mode: "javascript",
+            theme: "cobalt",
+            lineWrapping: true
+        });
+          </script>
+  </body>
+</html>

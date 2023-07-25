@@ -11,7 +11,7 @@ form.addEventListener('submit', async event => {
         else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
 
         b64 =  btoa(__uv$config.prefix + __uv$config.encodeUrl(url));
-        window.location.href = "/search-results.html#url=[" + b64 + "];"
+        window.location.href = "/search-results.html?url=[" + b64 + "];"
        
     });
 });

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Immortal</title>
+  </head>
+  <body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+      * {color-scheme:dark; font-family: "Inter", "Segoe UI", "Roboto", sans-serif;}
+
+      pre, code {font-family: "IBM Plex Mono", monospace;}
+      vsep {border-right: 2px solid rgba(255,255,255,0.7); margin-left:4px; margin-right:8px;}
+      nav * {display:inline; filter:none;}
+
+      body,html {background: linear-gradient(120deg, rgba(01,06,15,1) 21%, rgba(01,21,49,1) 97%); width:100%;height:100%;}
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css" />
+    <nav class="h-fit w-full rounded-b-lg bg-gradient-to-b from-[rgba(0,0,0,0),15%] to-cyan-950 px-2 py-2 ring-[1px] ring-cyan-700 duration-[350ms] hover:to-[#0a3b4f] hover:ring-[3px]">
+      <h1 class="text-xl font-light">Immortal</h1>
+      <vsep></vsep>
+      <a href="#" class="rounded-lg bg-cyan-800 px-2 py-1 ring-white duration-300 hover:ring-1">Home</a>
+      <a class="gpt rounded-lg bg-gray-600 px-2 py-1 ring-white duration-300 hover:ring-1">GPT</a>
+      <a href="settings.html" class="rounded-lg bg-cyan-800 px-2 py-1 ring-white duration-300 hover:ring-1">Settings</a>
+      <a href="search.html" class="rounded-lg bg-cyan-800 px-2 py-1 ring-white duration-300 hover:ring-1">Search</a>
+    </nav>
+    <br />
+    <div class="container mx-auto w-[40%] max-w-[600px]">
+      <div class="w-full rounded-lg rounded-b-none bg-slate-800 px-2 py-1 ring-2 ring-slate-800">Popout Clock 
+        <span class="btns float-right cursor-pointer rounded-md bg-red-500 px-2 hover:bg-red-700">✖</span>
+      </div>
+      <div class="w-full rounded-lg rounded-t-none bg-black/20 px-5 py-2 ring-2 ring-cyan-900 transition-all duration-[420ms] hover:bg-[#111827]/50 hover:shadow-lg">
+      
+    <h1 class="time text-xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl text-center ">01:05:04 AM</h1>
+    <h2 class="date text-xl opacity-80 text-center">Jul. 23rd 2023</h2>
+   
+      </div>
+    </div>
+<br>
+    <div class="mx-auto w-[540px] rounded-lg rounded-b-none bg-slate-800 px-2 py-1">Immortal <span class="btns float-right cursor-pointer rounded-md bg-red-500 px-2 hover:bg-red-700">✖</span></div>
+    <div class="mx-auto w-[536px] rounded-lg rounded-t-none bg-black/20 px-5 py-2 ring-2 ring-cyan-900 transition-all duration-[420ms] hover:bg-[#111827]/50 hover:shadow-lg">
+      <h1 class="mx-auto text-center text-3xl font-semibold">Welcome to Immortal!</h1>
+      <q class="mx-auto block text-center text-lg italic">Very creative quote here</q>
+      <hr class="mx-auto max-w-sm" />
+      <br />
+      <bgrid class="mx-auto block text-center">
+        <select class="-my-[8px] cursor-pointer rounded-lg bg-cyan-800/50 px-4 py-[8.7px] text-lg ring-white duration-300 hover:bg-cyan-900 hover:ring-1 focus:rounded-b-none">
+          <option selected disabled>Open in...</option>
+          <option value="blob">blob:</option>
+          <option value="popup">Popup</option>
+          <option value="ab">about:blank</option>
+        </select>
+        <a href="search.html" class="rounded-lg bg-cyan-800/50 px-4 py-2 text-xl ring-white duration-300 hover:bg-cyan-900/70 hover:ring-1">Search</a>
+
+        <a class="m-0 rounded-lg bg-gray-800 px-4 py-2 text-xl ring-gray-500 duration-300 hover:bg-gray-900 hover:ring-1"><i class="fa-brands fa-discord fa-lg w-8"></i></a>
+      </bgrid>
+    </div>
+    <footer class="fixed bottom-0.5 w-full bg-black/20 px-8 py-3">
+      made by <a href="https://www.rare1k.space" target="_blank" class="hover:text-blue-400">rare1k</a> | <a href="https://en.wikipedia.org/wiki/Copyleft" target="_blank" class="hover:text-blue-400">copyleft</a> 2023 | <a href="credits.html" target="_blank" class="hover:text-blue-400">uv credits</a>
+      <br />
+      <span class="spoiler rounded-lg bg-gray-800 px-[0.2rem] py-[0.1rem] text-transparent transition-all duration-[350ms] hover:bg-gray-700 hover:text-white">3mb tailwind bundle my ａss, its 350kb atmost</span>
+      <a class="fixed bottom-0 right-0 float-right text-[9px] opacity-5 duration-300 hover:text-[12px] hover:text-yellow-500 hover:opacity-60">pacman</a>
+    </footer>
+    <script src="home.js"></script>
+    <script src="quotes.js"></script>
+    <link rel="stylesheet" href="index.css">
+  </body>
+</html>

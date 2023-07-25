@@ -19,10 +19,12 @@
     "@titaniumnetwork-dev/ultraviolet": "^2.0.0",
     "@tomphttp/bare-server-node": "^2.0.0",
     "express": "^4.18.2",
-    "ultraviolet-static": "file:Ultraviolet-Static"
+    "tailwind": "^4.0.0",
+    "ultraviolet-static": "file:static"
   },
   "devDependencies": {
     "eslint": "^8.36.0",
-    "prettier": "^2.8.4"
+    "prettier": "^2.8.4",
+    "tailwindcss": "^3.3.3"
   }
 }
