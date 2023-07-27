@@ -42,4 +42,4 @@ Requirements:
    ```bash
    node ./src/index.js
    ```
-   This will run Immortal on default port of 8080. You can customize the port in index.js
+   This will run Immortal on default port of 8080. You can customize the port in [index.js](https://github.com/ievade/Immortal/blob/main/src/index.js)https://github.com/ievade/Immortal/blob/main/src/index.js
