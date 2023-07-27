@@ -31,9 +31,15 @@ Requirements:
 - Git
 - This tutorial is made for Windows in mind, but should be similar steps on Linux or Mac.
 1. Start by cloning Immortal to your PC (this requires Git to be installed):
-   `git clone https://github.com/ievade/Immortal`
-2. Install required packages & static folder
-   `npm i & npm i ./static`
-3. Run Immortal
-   `node ./src/index.js`
-   This will run Immortal on default port of 8080.
+   ```bash
+   git clone https://github.com/ievade/Immortal
+   ```
+3. Install required packages & static folder
+   ```bash
+   npm i & npm i ./static
+   ```
+5. Run Immortal
+   ```bash
+   node ./src/index.js
+   ```
+   This will run Immortal on default port of 8080. You can customize the port in index.js
